@@ -10,24 +10,16 @@
         <header class="page-header">
             <h1><a href="/">Django Girls Blog</a></h1>
         </header>
-                <h3>1. Read Widely and Analytically:</h3>
-                <h3>2. Write Regularly:</h3>
-                <h3>3. Embrace the Writing Process:</h3>
-                <h3>4. Expand Your Vocabulary:</h3>
-                <h3>5. Focus on Clarity and Simplicity:</h3>
-                <h3>Conclusion:</h3>
         <main class="container">
             <div class="row">
                 <div class="col">
                     {% for post in posts %}
-                        <article class="post">
-                            <time class="date">
-                                {{ post.published_date }}
-                            </time>
-                            <h2><a href="">{{ post.title }}</a></h2>
-                            <p>{{ post.text|linebreaksbr }}</p>
-                        </article>
-                    {% endfor %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+{% endfor %}
                 </div>
             </div>
         </main>
